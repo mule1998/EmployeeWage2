@@ -10,7 +10,7 @@ emp_wage=0
 total_emp_hrs=0
 total_working_days=0
 #computation
-while total_emp_hrs<=max_hrs_in_month & total_working_days<num_of_working_days :
+while total_emp_hrs<=max_hrs_in_month and total_working_days<num_of_working_days :
 
     rand=random.randint(0, 3)
     if rand==is_full_time:
