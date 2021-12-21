@@ -7,6 +7,7 @@ class EmpWage():
     is_part_time=4
     absent=0
     
+    
     def __init__(self,*params):
         self.company=params[0]
         self.hours=params[1]
@@ -17,7 +18,9 @@ class EmpWage():
         work_hrs=0
         work_days=0 
         self.emp_wage=0
+        daily_wage=0
         emp_hrs=0
+        self.emp_list1=[]
         #computation
         while work_days < self.days and work_hrs <= self.hours :
             work_days+=1
@@ -34,9 +37,13 @@ class EmpWage():
                 work_hrs-=emp_hrs
                 break
             self.emp_wage=self.per_hr*work_hrs
+            self.daily_wage=self.per_hr*work_hrs
+            
+            self.emp_list1.append(daily_wage)
+
 
     def __str__(self):
-        return "company name :"+self.company+" salary:"+str(self.emp_wage )
+        return "company name :"+self.company+" salary: "+str(self.emp_wage)+ " DailyWage "+str(self.daily_wage)
 
 emp1=EmpWage("BMW", 100, 20, 20)
 emp1.wage()
