@@ -1,4 +1,5 @@
-"""Calculatig employee wage for multiple companies"""
+"""Calculatig employee wage for multiple companies
+who's having their own working days and haours"""
 
 class EmpWage():
    
@@ -40,5 +41,14 @@ class EmpWage():
 emp1=EmpWage("BMW", 100, 20, 20)
 emp1.wage()
 print(emp1)
+emp2=EmpWage("Ferrari", 100, 22, 49)
+emp2.wage()
+print(emp2)
 
+emp_list=[]
+emp_list.append(emp1)
+emp_list.append(emp2)
+
+for i in range(len(emp_list)):
+    print(emp_list[i])
 
